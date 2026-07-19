@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Saniya ❤️</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    background:linear-gradient(#ffe6ee,#ffffff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+.container{
+    width:90%;
+}
+
+
+#poke{
+    width:160px;
+    height:160px;
+    background:#ff5c8a;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    animation:float 2s infinite;
+}
+
+
+@keyframes float{
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+
+.pop{
+    animation:pop .5s forwards;
+}
+
+
+@keyframes pop{
+    to{
+        transform:scale(2);
+        opacity:0;
+    }
+}
+
+
+#content{
+    display:none;
+    animation:fade 1s;
+}
+
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:scale(.5);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+h1{
+    color:#ff3b75;
+    font-size:38px;
+}
+
+
+p{
+    color:#444;
+    font-size:20px;
+    line-height:1.5;
+}
+
+
+img{
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+
+audio{
+    margin-top:20px;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div id="poke">
+    Poke 🎈
+</div>
+
+
+
+<div id="content">
+
+<h1>
+Saniya ❤️
+</h1>
+
+
+<p>
+"Some people don't need a reason to be special,<br>
+their presence itself feels special ✨"
+</p>
+
+
+<img src="photo.jpeg.JPG">
+
+
+<br>
+
+
+<audio controls autoplay>
+<source src="Tere hasi Hansi.mp3" type="audio/mpeg">
+</audio>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+let poke=document.getElementById("poke");
+let content=document.getElementById("content");
+
+
+poke.onclick=function(){
+
+    poke.classList.add("pop");
+
+    setTimeout(function(){
+
+        poke.style.display="none";
+        content.style.display="block";
+
+    },500);
+
+};
+
+
+</script>
+
+
+</body>
+</html>
