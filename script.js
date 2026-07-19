@@ -1,5 +1,33 @@
-const p=[...Array(20)].map((_,i)=>`photo${i+1}.jpeg`);
-const c=['Some smiles stay with you...','Some moments never fade...','And some people quietly become important...'];
-heart.onclick=()=>{start.classList.add('hidden');show.classList.remove('hidden');audio.play().catch(()=>{});
-let i=0;img.src=p[0];caption.textContent=c[0];
-const t=setInterval(()=>{i++;if(i>=p.length){clearInterval(t);show.classList.add('hidden');letter.classList.remove('hidden');return;}img.src=p[i];caption.textContent=c[Math.min(2,Math.floor(i/7))];},3500)};
+// Photo list
+const photos = [
+  "photo.jpeg.JPG"
+];
+
+let currentPhoto = 0;
+
+// Find image element
+const img = document.getElementById("photo");
+
+if (img) {
+  img.src = photos[currentPhoto];
+}
+
+// Change photo function (if you add more photos later)
+function nextPhoto() {
+  currentPhoto++;
+
+  if (currentPhoto >= photos.length) {
+    currentPhoto = 0;
+  }
+
+  if (img) {
+    img.src = photos[currentPhoto];
+  }
+}
+
+// Button function
+const nextBtn = document.getElementById("nextBtn");
+
+if (nextBtn) {
+  nextBtn.addEventListener("click", nextPhoto);
+}
